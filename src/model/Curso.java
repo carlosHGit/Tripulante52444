@@ -5,13 +5,16 @@ public class Curso {
     private String nombre;
     private char jornada;
 
-public Curso(int pCodigo, String pCombre, char pJornada) {
-    super();
-    this.codigo = pCodigo;
-    this.nombre = pCombre;
-    this.jornada = pJornada;
+    private Formador formador;
 
-}
+    public Curso(int pCodigo, String pCombre, char pJornada, int fCodigo, String fNombre) {
+        super();
+        this.codigo = pCodigo;
+        this.nombre = pCombre;
+        this.jornada = pJornada;
+        formador = new Formador(fNombre, fCodigo);
+
+    }
 
 public int getCodigo() {
     return codigo;
@@ -22,6 +25,10 @@ public String getNombre() {
 public char getJornada() {
     return jornada;
 }
+public Formador getFormador() {
+    return formador;
+}
+
 }
 
 
